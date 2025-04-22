@@ -24,4 +24,20 @@ public class UserServiceImpl implements UserService{
 		return user1;
 	}
 
+
+    @Override
+	public User getUser(Integer id) {
+		User user1 = userRepository.findById(id);
+		return user1;
+	  }
+
+	@Override
+	public void deleteUser(Integer id) {
+		userRepository.deleteById(id);
+		
+	}
+
+	
 }
+
+

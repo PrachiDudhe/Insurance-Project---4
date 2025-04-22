@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="nominee")
+@Table(name="nominee1")
 public class Nominee {
 	
 	@Id
@@ -17,6 +17,11 @@ public class Nominee {
 	private String status;
 	private Integer userId;
 	
+	
+	
+	public Nominee() {
+		System.out.println("Default constructor");
+	}
 	public Nominee(int id, String nominee_name, String status, Integer userId) {
 		this.id = id;
 		this.nominee_name = nominee_name;

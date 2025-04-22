@@ -11,7 +11,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="user")
+@Table(name="user1")
 public class User {
 	
 	//user id ,name,email  nominee id status nominee name
@@ -23,6 +23,11 @@ public class User {
 	
 	@OneToMany(mappedBy="userId")
 	private List<Nominee> nominees;
+	
+
+	public User() {
+		System.out.println("Default Constructure");
+	}
 
 	public User(int id, String name, String email, List<Nominee> nominees) {
 		this.id = id;

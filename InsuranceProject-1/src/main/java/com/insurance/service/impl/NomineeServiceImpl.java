@@ -1,5 +1,8 @@
 package com.insurance.service.impl;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,4 +27,19 @@ public class NomineeServiceImpl implements NomineeService{
 		return nominee1;
 	}
 
+	@Override
+	public List<Nominee> getNominee(Integer id) {
+		List<Nominee>  nominee1 = nomineeRepository.findAllNominee(id);
+		return nominee1;
+	}
+
+	@Override
+	public void deleteNominee(Integer id) {
+		nomineeRepository.deleteById(id);
+		
+	}
+
+	
+
+	
 }
